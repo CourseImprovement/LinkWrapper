@@ -22,10 +22,14 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/link/{url}', function(Request $request) use($app){
-	print_r($request->query);
-	echo "<br>";
-	print_r($request->attributes);
+$app->get('/link/{url}', function($url) use($app){
+	echo "<pre><code>";
+	print_r($url);
+	echo "</code></pre>";
+	echo '<br>';
+	echo "<pre><code>";
+	print_r($app);
+	echo "</code></pre>";
 	die();
 });
 

@@ -22,8 +22,9 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/link/{url}', function() use($app){
+$app->get('/link/{url}', function(Silex\Application $app, $url){
 	echo "<pre><code>";
+	print_r($url);
 	echo "</code></pre>";
 	echo '<br>';
 	echo "<pre><code>";

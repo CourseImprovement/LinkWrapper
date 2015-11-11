@@ -22,9 +22,8 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/link/{url}', function($url) use($app){
+$app->get('/link/{url}', function() use($app){
 	echo "<pre><code>";
-	print_r($url);
 	echo "</code></pre>";
 	echo '<br>';
 	echo "<pre><code>";

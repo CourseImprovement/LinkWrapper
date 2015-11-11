@@ -22,8 +22,10 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/link/{:url}', function(Request $request) use($app){
+$app->get('/link/{url}', function(Request $request) use($app){
 	print_r($request->query);
+	echo "<br>";
+	print_r($request->attributes);
 	die();
 });
 

@@ -23,18 +23,7 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/link/{url}', function(Silex\Application $app, $url){
-	echo "<pre><code>";
-	print_r($url);
-	echo "</code></pre>";
-	echo '<br>';
-	echo "<pre><code>";
-	print_r($app);
-	echo "</code></pre>";
-	die();
-});
-
-$app->get('/link/', function() use($app){
-	echo "test";
+	echo $url;
 	die();
 });
 

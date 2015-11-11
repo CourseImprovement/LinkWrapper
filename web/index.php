@@ -22,4 +22,9 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('/link/:url', function($url) use($app){
+	echo $url;
+	die();
+});
+
 $app->run();

@@ -27,4 +27,9 @@ $app->get('/link/:url', function($url) use($app){
 	die();
 });
 
+$app->get('/link/', function() use($app){
+	echo "test";
+	die();
+});
+
 $app->run();
